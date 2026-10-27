@@ -1,0 +1,2 @@
+function e(e,t){let n=t.map(e=>e.map(e=>`"${String(e).replaceAll(`"`,`""`)}"`).join(`,`)).join(`\r
+`),r=URL.createObjectURL(new Blob([n],{type:`text/csv;charset=utf-8`})),i=document.createElement(`a`);i.href=r,i.download=e,i.style.display=`none`,document.body.append(i),i.click(),i.remove(),window.setTimeout(()=>URL.revokeObjectURL(r),1e3)}export{e as t};
